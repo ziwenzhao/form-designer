@@ -1,0 +1,14 @@
+<div class="wf-panel wf-widgetspanel">
+  <div class="wf-panel-tab">
+    <a href="javascript:;" class="tabitem current">控件</a>
+  </div>
+  <div class="wf-panel-body">
+    <div *ngFor="let item of components;let index = index" class="wf-widgetsitem" [attr.data-index]="index" [attr.data-type]="item.componentName"
+      (mousedown)="start($event)">
+      <label>
+        {{item.name}}
+      </label>
+      <i class="widgeticon" [ngClass]="item.componentName"></i>
+    </div>
+  </div>
+</div>

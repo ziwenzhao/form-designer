@@ -1,0 +1,34 @@
+<div class="wf-form wf-formsettings">
+  <div class="wf-field wf-setting-title">
+    <div class="fieldname">
+      <span>审批名称</span>
+      <span class="fieldinfo">最多10个字</span>
+    </div>
+    <div class="fieldblock">
+      <input type="text" (input)="changeInfo()" maxlength="10" [(ngModel)]="title">
+    </div>
+  </div>
+  <div class="wf-field wf-setting-description">
+    <div class="fieldname">
+      <span>审批说明</span>
+      <span class="fieldinfo">最多100个字</span>
+    </div>
+    <div class="fieldblock">
+      <textarea type="text" (input)="changeInfo()" maxlength="100" [(ngModel)]="description"></textarea>
+    </div>
+  </div>
+  <div class="wf-field wf-setting-icon">
+    <div class="fieldname">
+      图标
+    </div>
+    <div class="fieldblock">
+      <div class="wf-iconselect">
+        <label (click)="selectIcon($event)" [attr.data-index]="index" [attr.data-icon]="item.value" *ngFor="let item of icons;let index = index" class="iconitem" [ngClass]="index==selected?'seltected':''">
+          <i class="icon icon-checked" *ngIf="index==selected"></i>
+          <img [src]="item.value">
+
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

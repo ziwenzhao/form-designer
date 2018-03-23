@@ -1,0 +1,461 @@
+  <div class="wf-formcanvas">
+    <div class="wf-formcanvas-title">{{title}}</div>
+    <div class="wf-formcanvas-inner">
+      <div class="wf-formcanvas-body dropbody" [ngClass]="{empty:isempty}">
+        <div class="wf-dragging-mark" *ngIf="InCanvas==0"></div>
+
+        <div *ngFor="let item of components;let index = index">
+          <div *ngIf="item.componentName=='textareafield'">
+            <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="index"
+              [ngClass]="index==selected?'active':''" class="wf-component wf-component-textareafield">
+              <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+              <div class="wf-overlay"></div>
+              <div class="wf-componentview">
+                <div class="wf-componentview-border">
+                  <label class="wf-componentview-label">{{item.defaultLable}}</label>
+                  <span class="wf-componentview-placeholder">{{item.defaultProps}}
+                    <span *ngIf="item.defaultImportant">（必填）</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="wf-dragging-mark" *ngIf="InCanvas==index+1"></div>
+          </div>
+          <div *ngIf="item.componentName=='textfield'">
+            <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="index"
+              [ngClass]="index==selected?'active':''" class="wf-component wf-component-textfield">
+              <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+              <div class="wf-overlay"></div>
+              <div class="wf-componentview">
+                <div class="wf-componentview-border">
+                  <label class="wf-componentview-label">{{item.defaultLable}}</label>
+                  <span class="wf-componentview-placeholder">{{item.defaultProps}}
+                    <span *ngIf="item.defaultImportant">（必填）</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="wf-dragging-mark" *ngIf="InCanvas==index+1"></div>
+          </div>
+          <div *ngIf="item.componentName=='numberfield'">
+            <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="index"
+              [ngClass]="index==selected?'active':''" class="wf-component wf-component-numberfield">
+              <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+              <div class="wf-overlay"></div>
+              <div class="wf-componentview">
+                <div class="wf-componentview-border">
+                  <label class="wf-componentview-label">{{item.defaultLable}}</label>
+                  <span class="wf-componentview-placeholder">{{item.defaultProps}}
+                    <span *ngIf="item.defaultImportant">（必填）</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="wf-dragging-mark" *ngIf="InCanvas==index+1"></div>
+          </div>
+          <div *ngIf="item.componentName=='ddselectfield'">
+            <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseover)="hover($event)" (mouseout)="mouseOut($event)" [attr.data-index]="index"
+              [ngClass]="index==selected?'active':''" class="wf-component wf-component-ddselectfield">
+              <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+              <div class="wf-overlay"></div>
+              <div class="wf-componentview">
+                <div class="wf-componentview-border">
+                  <label class="wf-componentview-label">{{item.defaultLable}}</label>
+                  <span class="wf-componentview-placeholder">{{item.defaultProps}}
+                    <span *ngIf="item.defaultImportant">（必填）</span>
+                  </span>
+                  <i class="icon icon-enter"></i>
+                </div>
+              </div>
+            </div>
+            <div class="wf-dragging-mark" *ngIf="InCanvas==index+1"></div>
+          </div>
+          <div *ngIf="item.componentName=='ddmultiselectfield'">
+            <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="index"
+              [ngClass]="index==selected?'active':''" class="wf-component wf-component-ddmultiselectfield">
+              <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+              <div class="wf-overlay"></div>
+              <div class="wf-componentview">
+                <div class="wf-componentview-border">
+                  <label class="wf-componentview-label">{{item.defaultLable}}</label>
+                  <span class="wf-componentview-placeholder">{{item.defaultProps}}
+                    <span *ngIf="item.defaultImportant">（必填）</span>
+                  </span>
+                  <i class="icon icon-enter"></i>
+                </div>
+              </div>
+            </div>
+            <div class="wf-dragging-mark" *ngIf="InCanvas==index+1"></div>
+          </div>
+          <div *ngIf="item.componentName=='dddatefield'">
+            <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="index"
+              [ngClass]="index==selected?'active':''" class="wf-component wf-component-dddatefield">
+              <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+              <div class="wf-overlay"></div>
+              <div class="wf-componentview">
+                <div class="wf-componentview-border">
+                  <label class="wf-componentview-label">{{item.defaultLable}}</label>
+                  <span class="wf-componentview-placeholder">{{item.defaultProps}}
+                    <span *ngIf="item.defaultImportant">（必填）</span>
+                  </span>
+                  <i class="icon icon-enter"></i>
+                </div>
+              </div>
+            </div>
+            <div class="wf-dragging-mark" *ngIf="InCanvas==index+1"></div>
+          </div>
+          <div *ngIf="item.componentName=='dddaterangefield'">
+            <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="index"
+              [ngClass]="index==selected?'active':''" class="wf-component wf-component-dddaterangefield">
+              <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+              <div class="wf-overlay"></div>
+              <div class="wf-componentview">
+                <div class="wf-componentview-border">
+                  <label class="wf-componentview-label">{{item.defaultLable}}</label>
+                  <span class="wf-componentview-placeholder">{{item.defaultProps}}
+                    <span *ngIf="item.defaultImportant">（必填）</span>
+                  </span>
+                  <i class="icon icon-enter"></i>
+                </div>
+                <div class="wf-componentview-border">
+                  <label class="wf-componentview-label">{{item.defaultLable2}}</label>
+                  <span class="wf-componentview-placeholder">{{item.defaultProps2}}
+                    <span *ngIf="item.defaultImportant">（必填）</span>
+                  </span>
+                  <i class="icon icon-enter"></i>
+                </div>
+                <div class="wf-componentview-border" *ngIf="item.defaultAutorekonTime">
+                  <label class="wf-componentview-label">
+                    <span>{{item.defaultSubtitle}}</span>
+                    <span>（天）</span>
+                  </label>
+                  <span class="wf-componentview-placeholder"></span>
+                </div>
+                <span></span>
+              </div>
+            </div>
+            <div class="wf-dragging-mark" *ngIf="InCanvas==index+1"></div>
+          </div>
+          <div *ngIf="item.componentName=='ddphotofield'">
+            <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="index"
+              [ngClass]="index==selected?'active':''" class="wf-component wf-component-ddphotofield">
+              <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+              <div class="wf-overlay"></div>
+              <div class="wf-componentview">
+                <div class="wf-componentview-border">
+                  <label class="wf-componentview-label">{{item.defaultLable}}</label>
+                  <span class="wf-componentview-placeholder">{{item.defaultProps}}
+                    <span *ngIf="item.defaultImportant">（必填）</span>
+                  </span>
+                  <i class="icon icon-camera"></i>
+                </div>
+              </div>
+            </div>
+            <div class="wf-dragging-mark" *ngIf="InCanvas==index+1"></div>
+          </div>
+          <div *ngIf="item.componentName=='tablefield'">
+            <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="index"
+              [ngClass]="index==selected?'active':''" class="wf-component wf-component-tablefield">
+              <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+              <div class="wf-overlay"></div>
+              <div class="wf-componentview">
+                <label class="wf-componentview-label">{{item.defaultLable}}</label>
+                <div class="wf-componentview-area" [ngClass]="{empty:item.components.length<=0}">
+                  <span class="emptytip" *ngIf="item.components.length<=0">可拖入多个组件（不包含明细组件）</span>
+                  <div class="wf-componentgroup dropbody">
+                    <div class="wf-dragging-mark" *ngIf="item.InTableCanvas==0"></div>
+                    <div *ngFor="let itemInTable of item.components; let idx = index">
+                      <div *ngIf="itemInTable.componentName=='textareafield'">
+                        <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="idx"
+                          [ngClass]="idx==item.selected?'active':''" class="wf-component wf-component-textareafield">
+                          <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+                          <div class="wf-overlay"></div>
+                          <div class="wf-componentview">
+                            <div class="wf-componentview-border">
+                              <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
+                              <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
+                                <span *ngIf="item.defaultImportant">（必填）</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="wf-dragging-mark" *ngIf="item.InTableCanvas==idx+1"></div>
+                      </div>
+                      <div *ngIf="itemInTable.componentName=='textfield'">
+                        <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="idx"
+                          [ngClass]="idx==item.selected?'active':''" class="wf-component wf-component-textfield">
+                          <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+                          <div class="wf-overlay"></div>
+                          <div class="wf-componentview">
+                            <div class="wf-componentview-border">
+                              <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
+                              <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
+                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="wf-dragging-mark" *ngIf="item.InTableCanvas==idx+1"></div>
+                      </div>
+                      <div *ngIf="itemInTable.componentName=='numberfield'">
+                        <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="idx"
+                          [ngClass]="idx==item.selected?'active':''" class="wf-component wf-component-numberfield">
+                          <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+                          <div class="wf-overlay"></div>
+                          <div class="wf-componentview">
+                            <div class="wf-componentview-border">
+                              <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
+                              <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
+                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="wf-dragging-mark" *ngIf="item.InTableCanvas==idx+1"></div>
+                      </div>
+                      <div *ngIf="itemInTable.componentName=='ddselectfield'">
+                        <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseover)="hover($event)" (mouseout)="mouseOut($event)" [attr.data-index]="idx"
+                          [ngClass]="idx==item.selected?'active':''" class="wf-component wf-component-ddselectfield">
+                          <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+                          <div class="wf-overlay"></div>
+                          <div class="wf-componentview">
+                            <div class="wf-componentview-border">
+                              <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
+                              <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
+                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                              </span>
+                              <i class="icon icon-enter"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="wf-dragging-mark" *ngIf="item.InTableCanvas==idx+1"></div>
+                      </div>
+                      <div *ngIf="itemInTable.componentName=='ddmultiselectfield'">
+                        <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="idx"
+                          [ngClass]="idx==item.selected?'active':''" class="wf-component wf-component-ddmultiselectfield">
+                          <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+                          <div class="wf-overlay"></div>
+                          <div class="wf-componentview">
+                            <div class="wf-componentview-border">
+                              <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
+                              <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
+                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                              </span>
+                              <i class="icon icon-enter"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="wf-dragging-mark" *ngIf="item.InTableCanvas==idx+1"></div>
+                      </div>
+                      <div *ngIf="itemInTable.componentName=='dddatefield'">
+                        <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="idx"
+                          [ngClass]="idx==item.selected?'active':''" class="wf-component wf-component-dddatefield">
+                          <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+                          <div class="wf-overlay"></div>
+                          <div class="wf-componentview">
+                            <div class="wf-componentview-border">
+                              <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
+                              <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
+                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                              </span>
+                              <i class="icon icon-enter"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="wf-dragging-mark" *ngIf="item.InTableCanvas==idx+1"></div>
+                      </div>
+                      <div *ngIf="itemInTable.componentName=='dddaterangefield'">
+                        <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="idx"
+                          [ngClass]="idx==item.selected?'active':''" class="wf-component wf-component-dddaterangefield">
+                          <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+                          <div class="wf-overlay"></div>
+                          <div class="wf-componentview">
+                            <div class="wf-componentview-border">
+                              <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
+                              <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
+                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                              </span>
+                              <i class="icon icon-enter"></i>
+                            </div>
+                            <div class="wf-componentview-border">
+                              <label class="wf-componentview-label">{{itemInTable.defaultLable2}}</label>
+                              <span class="wf-componentview-placeholder">{{itemInTable.defaultProps2}}
+                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                              </span>
+                              <i class="icon icon-enter"></i>
+                            </div>
+                            <div class="wf-componentview-border" *ngIf="itemInTable.defaultAutorekonTime">
+                              <label class="wf-componentview-label">
+                                <span>{{itemInTable.defaultSubtitle}}</span>
+                                <span>（天）</span>
+                              </label>
+                              <span class="wf-componentview-placeholder"></span>
+                            </div>
+                            <span></span>
+                          </div>
+                        </div>
+                        <div class="wf-dragging-mark" *ngIf="item.InTableCanvas==idx+1"></div>
+                      </div>
+                      <div *ngIf="itemInTable.componentName=='ddphotofield'">
+                        <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="idx"
+                          [ngClass]="idx==item.selected?'active':''" class="wf-component wf-component-ddphotofield">
+                          <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+                          <div class="wf-overlay"></div>
+                          <div class="wf-componentview">
+                            <div class="wf-componentview-border">
+                              <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
+                              <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
+                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                              </span>
+                              <i class="icon icon-camera"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="wf-dragging-mark" *ngIf="item.InTableCanvas==idx+1"></div>
+                      </div>
+                      <div *ngIf="itemInTable.componentName=='textnote'">
+                        <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="idx"
+                          [ngClass]="idx==item.selected?'active':''" class="wf-component wf-component-textnote">
+                          <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+                          <div class="wf-overlay"></div>
+                          <div class="wf-componentview">
+                            <div class="wf-componentview-content">
+                              {{item.defaultProps}}
+                              <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="wf-dragging-mark" *ngIf="item.InTableCanvas==idx+1"></div>
+                      </div>
+                      <div *ngIf="itemInTable.componentName=='moneyfield'">
+                        <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="idx"
+                          [ngClass]="idx==item.selected?'active':''" class="wf-component wf-component-moneyfield">
+                          <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+                          <div class="wf-overlay"></div>
+                          <div class="wf-componentview">
+                            <div class="wf-componentview-border">
+                              <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
+                              <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
+                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                              </span>
+                            </div>
+                            <div class="cnformat" *ngIf="itemInTable.defaultTranslate">
+                              大写：壹万元整（示例）
+                            </div>
+                          </div>
+                        </div>
+                        <div class="wf-dragging-mark" *ngIf="item.InTableCanvas==idx+1"></div>
+                      </div>
+                      <div *ngIf="itemInTable.componentName=='ddattachment'">
+                        <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="idx"
+                          [ngClass]="idx==item.selected?'active':''" class="wf-component wf-component-ddattachment">
+                          <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+                          <div class="wf-overlay"></div>
+                          <div class="wf-componentview">
+                            <div class="wf-componentview-border">
+                              <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
+                              <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
+                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                              </span>
+                            </div>
+                            <i class="icon icon-chakanfujian"></i>
+                          </div>
+                        </div>
+                        <div class="wf-dragging-mark" *ngIf="item.InTableCanvas==idx+1"></div>
+                      </div>
+                      <div *ngIf="itemInTable.componentName=='externalcontactfield'">
+                        <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="idx"
+                          [ngClass]="idx==item.selected?'active':''" class="wf-component wf-component-externalcontactfield">
+                          <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+                          <div class="wf-overlay"></div>
+                          <div class="wf-componentview">
+                            <div class="wf-componentview-border">
+                              <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
+                              <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
+                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                              </span>
+                            </div>
+                            <i class="icon icon-enter"></i>
+                          </div>
+                        </div>
+                        <div class="wf-dragging-mark" *ngIf="item.InTableCanvas==idx+1"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="wf-componentview-adddetail">
+                  {{item.defaultAction}}
+                </div>
+              </div>
+            </div>
+            <div class="wf-dragging-mark" *ngIf="InCanvas==index+1"></div>
+          </div>
+          <div *ngIf="item.componentName=='textnote'">
+            <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="index"
+              [ngClass]="index==selected?'active':''" class="wf-component wf-component-textnote">
+              <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+              <div class="wf-overlay"></div>
+              <div class="wf-componentview">
+                <div class="wf-componentview-content">
+                  {{item.defaultProps}}
+                  <span *ngIf="item.defaultImportant">（必填）</span>
+                </div>
+              </div>
+            </div>
+            <div class="wf-dragging-mark" *ngIf="InCanvas==index+1"></div>
+          </div>
+          <div *ngIf="item.componentName=='moneyfield'">
+            <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="index"
+              [ngClass]="index==selected?'active':''" class="wf-component wf-component-moneyfield">
+              <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+              <div class="wf-overlay"></div>
+              <div class="wf-componentview">
+                <div class="wf-componentview-border">
+                  <label class="wf-componentview-label">{{item.defaultLable}}</label>
+                  <span class="wf-componentview-placeholder">{{item.defaultProps}}
+                    <span *ngIf="item.defaultImportant">（必填）</span>
+                  </span>
+                </div>
+                <div class="cnformat" *ngIf="item.defaultTranslate">大写：壹万元整（示例）</div>
+              </div>
+            </div>
+            <div class="wf-dragging-mark" *ngIf="InCanvas==index+1"></div>
+          </div>
+          <div *ngIf="item.componentName=='ddattachment'">
+            <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="index"
+              [ngClass]="index==selected?'active':''" class="wf-component wf-component-ddattachment">
+              <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+              <div class="wf-overlay"></div>
+              <div class="wf-componentview">
+                <div class="wf-componentview-border">
+                  <label class="wf-componentview-label">{{item.defaultLable}}</label>
+                  <span class="wf-componentview-placeholder">{{item.defaultProps}}
+                    <span *ngIf="item.defaultImportant">（必填）</span>
+                  </span>
+                </div>
+                <i class="icon icon-chakanfujian"></i>
+              </div>
+            </div>
+            <div class="wf-dragging-mark" *ngIf="InCanvas==index+1"></div>
+          </div>
+          <div *ngIf="item.componentName=='externalcontactfield'">
+            <div (mousedown)="mouseDown($event)" draggable="true" (dragstart)="movestart($event)" (mouseout)="mouseOut($event)" (mouseover)="hover($event)" [attr.data-index]="index"
+              [ngClass]="index==selected?'active':''" class="wf-component wf-component-externalcontactfield">
+              <div class="wf-remove icon icon-close" (click)="close($event)"></div>
+              <div class="wf-overlay"></div>
+              <div class="wf-componentview">
+                <div class="wf-componentview-border">
+                  <label class="wf-componentview-label">{{item.defaultLable}}</label>
+                  <span class="wf-componentview-placeholder">{{item.defaultProps}}
+                    <span *ngIf="item.defaultImportant">（必填）</span>
+                  </span>
+                </div>
+                <i class="icon icon-enter"></i>
+              </div>
+            </div>
+            <div class="wf-dragging-mark" *ngIf="InCanvas==index+1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
