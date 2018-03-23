@@ -333,6 +333,7 @@ export class FormcanvasComponent implements OnInit{
   }
 
   ngAfterViewInit(){
+    console.log('ngAfterViewInit')
     let dom :any= document.querySelector('.wf-formcanvas-inner')
     var actualLeft = dom.offsetLeft;
     let current = dom.offsetParent;
@@ -351,7 +352,7 @@ export class FormcanvasComponent implements OnInit{
     this.width = dom.offsetWidth
     this.height = dom.offsetHeight
   }
-  ngOnChanges(){
+  ngAfterViewChecked(){
     this.domArr = []
     let domArr:any = document.querySelectorAll('.wf-formcanvas-body>div>div>.wf-component')
     for (let i = 0, l = domArr.length; i < l; i++) {
@@ -512,6 +513,7 @@ export class FormcanvasComponent implements OnInit{
     }
       return count
   }
+
 }
 
 
