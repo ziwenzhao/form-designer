@@ -9,65 +9,65 @@ import { EventService } from 'app/event.service';
 export class MainLeftComponent implements OnInit {
   private components = [
     {
-      name: '单行输入框',
-      defaultLable: '单行输入框',
-      defaultProps: '请输入',
+      name: 'Text Field',
+      defaultLable: 'Text Field',
+      defaultProps: '',
       defaultImportant: false,
       defaultPrint: false,
       componentName: 'textfield',
       supportSetting: ['label', 'placeholder', 'required', 'important', 'print']
     },
     {
-      name: '多行输入框',
-      defaultLable: '多行输入框',
-      defaultProps: '请输入',
+      name: 'Text Area',
+      defaultLable: 'Text Area',
+      defaultProps: '',
       defaultImportant: false,
       defaultPrint: false,
       componentName: 'textareafield',
       supportSetting: ['label', 'placeholder', 'required', 'important', 'print']
     },
     {
-      name: '数字输入框',
-      defaultLable: '数字输入框',
-      defaultProps: '请输入',
+      name: 'Number',
+      defaultLable: 'Number',
+      defaultProps: '',
       defaultImportant: false,
       defaultPrint: false,
       componentName: 'numberfield',
       supportSetting: ['label', 'placeholder', 'required', 'important', 'print', 'uint']
     },
     {
-      name: '单选框',
-      defaultLable: '单选框',
-      defaultProps: '请选择',
+      name: 'Select',
+      defaultLable: 'Select',
+      defaultProps: 'Please select',
       defaultImportant: false,
       defaultSync: false,
       defaultPrint: false,
       defaultOptions: [
-        { idx: 1, text: '选项1' },
-        { idx: 2, 'text': '选项2' },
-        { idx: 3, text: '选项3' }
+        { idx: 1, text: 'Option1' },
+        { idx: 2, 'text': 'Option2' },
+        { idx: 3, text: 'Option3' }
       ],
       componentName: 'ddselectfield',
       supportSetting: ['label', 'placeholder', 'options', 'sync', 'required', 'important', 'print']
     },
     {
-      name: '多选框',
-      defaultLable: '多选框',
-      defaultProps: '请选择',
+      name: 'Multiple Select',
+      defaultLable: 'Multiple Select',
+      defaultProps: 'Please select',
       defaultImportant: false,
       defaultPrint: false,
       defaultOptions: [
-        { idx: 1, text: '选项1' },
-        { idx: 2, 'text': '选项2' },
-        { idx: 3, text: '选项3' }
+        { idx: 1, text: 'Option1' },
+        { idx: 2, 'text': 'Option2' },
+        { idx: 3, text: 'Option3' }
       ],
       componentName: 'ddmultiselectfield',
       supportSetting: ['label', 'placeholder', 'options', 'required', 'important', 'print']
     },
     {
-      name: '日期',
-      defaultLable: '日期',
-      defaultProps: '请选择',
+      name: 'Date',
+      defaultLable: 'Date',
+      defaultProps: 'Please select a date',
       defaultImportant: false,
       defaultPrint: false,
       defaultFormat: 'yyyy-MM-dd',
@@ -75,16 +75,16 @@ export class MainLeftComponent implements OnInit {
       supportSetting: ['label', 'placeholder', 'dateformat', 'required', 'important', 'print']
     },
     {
-      name: '日期区间',
-      defaultLable: '开始时间',
-      defaultLable2: '结束时间',
-      defaultProps: '请选择',
-      defaultProps2: '请选择',
+      name: 'Date Range',
+      defaultLable: 'Start Date',
+      defaultLable2: 'End Date',
+      defaultProps: 'Please select a date',
+      defaultProps2: 'Please select a date',
       defaultImportant: false,
       defaultPrint: false,
       defaultAutorekonTime: false,
       defaultFormat: 'yyyy-MM-dd',
-      defaultSubtitle: '时长',
+      defaultSubtitle: 'Duration',
       componentName: 'dddaterangefield',
       supportSetting: [
         'label',
@@ -99,17 +99,17 @@ export class MainLeftComponent implements OnInit {
         'print']
     },
     {
-      name: '图片',
-      defaultLable: '图片',
+      name: 'Photo',
+      defaultLable: 'Photo',
       defaultImportant: false,
       defaultPrint: false,
       componentName: 'ddphotofield',
       supportSetting: ['label', 'required', 'important', 'print']
     },
     {
-      name: '明细',
-      defaultLable: '明细',
-      defaultAction: '增加明细',
+      name: 'Details',
+      defaultLable: 'Details',
+      defaultAction: 'Add Details',
       components: [],
       selected: null,
       defaultPrint: false,
@@ -118,10 +118,10 @@ export class MainLeftComponent implements OnInit {
       supportSetting: ['label', 'action', 'required']
     },
     {
-      name: '说明文字',
-      defaultLable: '说明文字',
+      name: 'Description',
+      defaultLable: 'Description',
       defaultImportant: false,
-      defaultProps: '请输入说明文字',
+      defaultProps: '',
       defaultShow: false,
       defaultPrint: false,
       defaultHref: '',
@@ -129,9 +129,9 @@ export class MainLeftComponent implements OnInit {
       supportSetting: ['textnote', 'required', 'href', 'print', 'show', 'important']
     },
     {
-      name: '金额',
-      defaultLable: '金额（元）',
-      defaultProps: '请输入',
+      name: 'Currency',
+      defaultLable: 'Currency',
+      defaultProps: '',
       defaultImportant: false,
       defaultTranslate: false,
       defaultPrint: false,
@@ -139,17 +139,17 @@ export class MainLeftComponent implements OnInit {
       supportSetting: ['label', 'placeholder', 'translate', 'required', 'important', 'print']
     },
     {
-      name: '附件',
-      defaultLable: '附件',
+      name: 'Attachment',
+      defaultLable: 'Attachment',
       defaultImportant: false,
       defaultPrint: false,
       componentName: 'ddattachment',
       supportSetting: ['label', 'required', 'important', 'print']
     },
     {
-      name: '外部联系人',
-      defaultLable: '外部联系人',
-      defaultProps: '请选择',
+      name: 'Contacts',
+      defaultLable: 'Contacts',
+      defaultProps: 'Please select contacts',
       defaultPrint: false,
       defaultImportant: false,
       componentName: 'externalcontactfield',

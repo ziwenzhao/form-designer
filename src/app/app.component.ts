@@ -1,3 +1,4 @@
+import { DataService } from 'app/data-service';
 import { EventService } from './event.service';
 import { Component, OnInit } from '@angular/core';
 

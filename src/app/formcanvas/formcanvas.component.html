@@ -14,7 +14,7 @@
                 <div class="wf-componentview-border">
                   <label class="wf-componentview-label">{{item.defaultLable}}</label>
                   <span class="wf-componentview-placeholder">{{item.defaultProps}}
-                    <span *ngIf="item.defaultImportant">（必填）</span>
+                    <span *ngIf="item.defaultImportant">（Required）</span>
                   </span>
                 </div>
               </div>
@@ -30,7 +30,7 @@
                 <div class="wf-componentview-border">
                   <label class="wf-componentview-label">{{item.defaultLable}}</label>
                   <span class="wf-componentview-placeholder">{{item.defaultProps}}
-                    <span *ngIf="item.defaultImportant">（必填）</span>
+                    <span *ngIf="item.defaultImportant">（Required）</span>
                   </span>
                 </div>
               </div>
@@ -46,7 +46,7 @@
                 <div class="wf-componentview-border">
                   <label class="wf-componentview-label">{{item.defaultLable}}</label>
                   <span class="wf-componentview-placeholder">{{item.defaultProps}}
-                    <span *ngIf="item.defaultImportant">（必填）</span>
+                    <span *ngIf="item.defaultImportant">（Required）</span>
                   </span>
                 </div>
               </div>
@@ -62,7 +62,7 @@
                 <div class="wf-componentview-border">
                   <label class="wf-componentview-label">{{item.defaultLable}}</label>
                   <span class="wf-componentview-placeholder">{{item.defaultProps}}
-                    <span *ngIf="item.defaultImportant">（必填）</span>
+                    <span *ngIf="item.defaultImportant">（Required）</span>
                   </span>
                   <i class="icon icon-enter"></i>
                 </div>
@@ -79,7 +79,7 @@
                 <div class="wf-componentview-border">
                   <label class="wf-componentview-label">{{item.defaultLable}}</label>
                   <span class="wf-componentview-placeholder">{{item.defaultProps}}
-                    <span *ngIf="item.defaultImportant">（必填）</span>
+                    <span *ngIf="item.defaultImportant">（Required）</span>
                   </span>
                   <i class="icon icon-enter"></i>
                 </div>
@@ -96,7 +96,7 @@
                 <div class="wf-componentview-border">
                   <label class="wf-componentview-label">{{item.defaultLable}}</label>
                   <span class="wf-componentview-placeholder">{{item.defaultProps}}
-                    <span *ngIf="item.defaultImportant">（必填）</span>
+                    <span *ngIf="item.defaultImportant">（Required）</span>
                   </span>
                   <i class="icon icon-enter"></i>
                 </div>
@@ -113,21 +113,21 @@
                 <div class="wf-componentview-border">
                   <label class="wf-componentview-label">{{item.defaultLable}}</label>
                   <span class="wf-componentview-placeholder">{{item.defaultProps}}
-                    <span *ngIf="item.defaultImportant">（必填）</span>
+                    <span *ngIf="item.defaultImportant">（Required）</span>
                   </span>
                   <i class="icon icon-enter"></i>
                 </div>
                 <div class="wf-componentview-border">
                   <label class="wf-componentview-label">{{item.defaultLable2}}</label>
                   <span class="wf-componentview-placeholder">{{item.defaultProps2}}
-                    <span *ngIf="item.defaultImportant">（必填）</span>
+                    <span *ngIf="item.defaultImportant">（Required）</span>
                   </span>
                   <i class="icon icon-enter"></i>
                 </div>
                 <div class="wf-componentview-border" *ngIf="item.defaultAutorekonTime">
                   <label class="wf-componentview-label">
                     <span>{{item.defaultSubtitle}}</span>
-                    <span>（天）</span>
+                    <span>（day）</span>
                   </label>
                   <span class="wf-componentview-placeholder"></span>
                 </div>
@@ -145,7 +145,7 @@
                 <div class="wf-componentview-border">
                   <label class="wf-componentview-label">{{item.defaultLable}}</label>
                   <span class="wf-componentview-placeholder">{{item.defaultProps}}
-                    <span *ngIf="item.defaultImportant">（必填）</span>
+                    <span *ngIf="item.defaultImportant">（Required）</span>
                   </span>
                   <i class="icon icon-camera"></i>
                 </div>
@@ -161,7 +161,7 @@
               <div class="wf-componentview">
                 <label class="wf-componentview-label">{{item.defaultLable}}</label>
                 <div class="wf-componentview-area" [ngClass]="{empty:item.components.length<=0}">
-                  <span class="emptytip" *ngIf="item.components.length<=0">可拖入多个组件（不包含明细组件）</span>
+                  <span class="emptytip" *ngIf="item.components.length<=0">Can drag in multiple components（exclude details component itself）</span>
                   <div class="wf-componentgroup dropbody">
                     <div class="wf-dragging-mark" *ngIf="item.InTableCanvas==0"></div>
                     <div *ngFor="let itemInTable of item.components; let idx = index">
@@ -174,7 +174,7 @@
                             <div class="wf-componentview-border">
                               <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
                               <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
-                                <span *ngIf="item.defaultImportant">（必填）</span>
+                                <span *ngIf="item.defaultImportant">（Required）</span>
                               </span>
                             </div>
                           </div>
@@ -190,7 +190,7 @@
                             <div class="wf-componentview-border">
                               <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
                               <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
-                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                                <span *ngIf="itemInTable.defaultImportant">（Required）</span>
                               </span>
                             </div>
                           </div>
@@ -206,7 +206,7 @@
                             <div class="wf-componentview-border">
                               <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
                               <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
-                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                                <span *ngIf="itemInTable.defaultImportant">（Required）</span>
                               </span>
                             </div>
                           </div>
@@ -222,7 +222,7 @@
                             <div class="wf-componentview-border">
                               <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
                               <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
-                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                                <span *ngIf="itemInTable.defaultImportant">（Required）</span>
                               </span>
                               <i class="icon icon-enter"></i>
                             </div>
@@ -239,7 +239,7 @@
                             <div class="wf-componentview-border">
                               <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
                               <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
-                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                                <span *ngIf="itemInTable.defaultImportant">（Required）</span>
                               </span>
                               <i class="icon icon-enter"></i>
                             </div>
@@ -256,7 +256,7 @@
                             <div class="wf-componentview-border">
                               <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
                               <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
-                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                                <span *ngIf="itemInTable.defaultImportant">（Required）</span>
                               </span>
                               <i class="icon icon-enter"></i>
                             </div>
@@ -273,14 +273,14 @@
                             <div class="wf-componentview-border">
                               <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
                               <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
-                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                                <span *ngIf="itemInTable.defaultImportant">（Required）</span>
                               </span>
                               <i class="icon icon-enter"></i>
                             </div>
                             <div class="wf-componentview-border">
                               <label class="wf-componentview-label">{{itemInTable.defaultLable2}}</label>
                               <span class="wf-componentview-placeholder">{{itemInTable.defaultProps2}}
-                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                                <span *ngIf="itemInTable.defaultImportant">（Required）</span>
                               </span>
                               <i class="icon icon-enter"></i>
                             </div>
@@ -305,7 +305,7 @@
                             <div class="wf-componentview-border">
                               <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
                               <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
-                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                                <span *ngIf="itemInTable.defaultImportant">（Required）</span>
                               </span>
                               <i class="icon icon-camera"></i>
                             </div>
@@ -321,7 +321,7 @@
                           <div class="wf-componentview">
                             <div class="wf-componentview-content">
                               {{item.defaultProps}}
-                              <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                              <span *ngIf="itemInTable.defaultImportant">（Required）</span>
                             </div>
                           </div>
                         </div>
@@ -336,7 +336,7 @@
                             <div class="wf-componentview-border">
                               <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
                               <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
-                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                                <span *ngIf="itemInTable.defaultImportant">（Required）</span>
                               </span>
                             </div>
                             <div class="cnformat" *ngIf="itemInTable.defaultTranslate">
@@ -355,7 +355,7 @@
                             <div class="wf-componentview-border">
                               <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
                               <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
-                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                                <span *ngIf="itemInTable.defaultImportant">（Required）</span>
                               </span>
                             </div>
                             <i class="icon icon-chakanfujian"></i>
@@ -372,7 +372,7 @@
                             <div class="wf-componentview-border">
                               <label class="wf-componentview-label">{{itemInTable.defaultLable}}</label>
                               <span class="wf-componentview-placeholder">{{itemInTable.defaultProps}}
-                                <span *ngIf="itemInTable.defaultImportant">（必填）</span>
+                                <span *ngIf="itemInTable.defaultImportant">（Required）</span>
                               </span>
                             </div>
                             <i class="icon icon-enter"></i>
@@ -398,7 +398,7 @@
               <div class="wf-componentview">
                 <div class="wf-componentview-content">
                   {{item.defaultProps}}
-                  <span *ngIf="item.defaultImportant">（必填）</span>
+                  <span *ngIf="item.defaultImportant">（Required）</span>
                 </div>
               </div>
             </div>
@@ -413,7 +413,7 @@
                 <div class="wf-componentview-border">
                   <label class="wf-componentview-label">{{item.defaultLable}}</label>
                   <span class="wf-componentview-placeholder">{{item.defaultProps}}
-                    <span *ngIf="item.defaultImportant">（必填）</span>
+                    <span *ngIf="item.defaultImportant">（Required）</span>
                   </span>
                 </div>
                 <div class="cnformat" *ngIf="item.defaultTranslate">大写：壹万元整（示例）</div>
@@ -430,7 +430,7 @@
                 <div class="wf-componentview-border">
                   <label class="wf-componentview-label">{{item.defaultLable}}</label>
                   <span class="wf-componentview-placeholder">{{item.defaultProps}}
-                    <span *ngIf="item.defaultImportant">（必填）</span>
+                    <span *ngIf="item.defaultImportant">（Required）</span>
                   </span>
                 </div>
                 <i class="icon icon-chakanfujian"></i>
@@ -447,7 +447,7 @@
                 <div class="wf-componentview-border">
                   <label class="wf-componentview-label">{{item.defaultLable}}</label>
                   <span class="wf-componentview-placeholder">{{item.defaultProps}}
-                    <span *ngIf="item.defaultImportant">（必填）</span>
+                    <span *ngIf="item.defaultImportant">（Required）</span>
                   </span>
                 </div>
                 <i class="icon icon-enter"></i>

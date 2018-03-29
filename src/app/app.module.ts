@@ -13,17 +13,8 @@ import { MainLeftComponent } from './main-left/main-left.component';
 import { SettingComponent } from './setting/setting.component';
 import { WidgetsettingsComponent } from './widgetsettings/widgetsettings.component';
 import { EventService } from 'app/event.service';
-// import * as firebase from 'firebase';
-// import 'firebase/firestore';
 import { DataService } from 'app/data-service';
-// firebase.initializeApp({
-//   apiKey: "AIzaSyDl8FtLlnZZEB7LK1UyKwyRo3-u9O876AI",
-//   authDomain: "crossingapp-8c987.firebaseapp.com",
-//   databaseURL: "https://crossingapp-8c987.firebaseio.com",
-//   projectId: "crossingapp-8c987",
-//   storageBucket: "crossingapp-8c987.appspot.com",
-//   messagingSenderId: "569648553346"
-// });
+import { FormRendererComponent } from './form-renderer/form-renderer.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +26,8 @@ import { DataService } from 'app/data-service';
     HeaderComponent,
     MainLeftComponent,
     SettingComponent,
-    WidgetsettingsComponent
+    WidgetsettingsComponent,
+    FormRendererComponent
   ],
   imports: [
     BrowserModule,

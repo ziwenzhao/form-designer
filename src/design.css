@@ -654,7 +654,7 @@ body {
   pointer-events: none;
 }
 .wf-main {
-  position: fixed;
+  /* position: fixed; */
   top: 40px;
   left: 50%;
   width: 1200px;
@@ -735,7 +735,7 @@ body {
 }
 .wf-panel-tab .tabitem {
   display: inline-block;
-  width: 99px;
+  width: 150px;
   height: 28px;
   line-height: 28px;
   font-size: 15px;
@@ -887,7 +887,7 @@ html:not(.wf-cursor-move) .wf-component.active > .wf-overlay {
 }
 .wf-componentview >.wf-componentview-border >.wf-componentview-label {
   display: inline-block;
-  width: 5.5em;
+  width: 6em;
   padding: 0 8px 0 0;
   color: #222;
 }
@@ -1319,5 +1319,12 @@ html:not(.wf-cursor-move) .wf-component.active > .wf-overlay {
 .wf-widgetsitem * {
   cursor: move;
 }
-
+.form-renderer{
+  position:absolute;
+  top:110%;
+  left:40%;
+}
+.form-renderer > *{
+  margin:20px
+}
 /*# sourceMappingURL=design.css.map */

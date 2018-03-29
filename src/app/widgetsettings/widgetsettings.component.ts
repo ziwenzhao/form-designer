@@ -41,12 +41,12 @@ export class WidgetsettingsComponent implements OnInit {
     if (index == this.supportSetting.defaultOptions.length - 1) {
       this.supportSetting.defaultOptions.push({
         idx: (this.supportSetting.defaultOptions.length + 1),
-        text: '选项' + (this.supportSetting.defaultOptions.length + 1)
+        text: 'Option' + (this.supportSetting.defaultOptions.length + 1)
       })
     } else {
       this.supportSetting.defaultOptions.splice((+index + 1), 0, {
         idx: (this.supportSetting.defaultOptions.length + 1),
-        text: '选项' + (this.supportSetting.defaultOptions.length + 1)
+        text: 'Option' + (this.supportSetting.defaultOptions.length + 1)
       })
     }
   }

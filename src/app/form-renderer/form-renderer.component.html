@@ -1,0 +1,149 @@
+<div class="form-renderer">
+表单渲染
+
+<button (click)="onShow()">show</button>
+<div *ngFor="let item of dataService.components;let index = index">
+  <div *ngIf="item.componentName=='textareafield'">
+    <label for="">{{item.defaultLable}}</label>
+    <input [placeholder]="item.defaultProps" type="textarea">
+  </div>
+  <div *ngIf="item.componentName=='textfield'">
+    <label for="">{{item.defaultLable}}</label>
+    <input [placeholder]="item.defaultProps" type="text">
+  </div>
+  <div *ngIf="item.componentName=='numberfield'">
+    <label for="">{{item.defaultLable}}</label>
+    <input [placeholder]="item.defaultProps" type="number">
+  </div>
+  <div *ngIf="item.componentName=='ddselectfield'">
+    <label for="">{{item.defaultLable}}</label>
+    <select name="" id="">
+      <option value="" disabled selected>{{item.defaultProps}}</option>
+      <option *ngFor="let option of item.defaultOptions" value="option.text">
+        {{option.text}}
+      </option>
+    </select>
+  </div>
+  <div *ngIf="item.componentName=='ddmultiselectfield'">
+    <label for="">{{item.defaultLable}}</label>
+    <select name="" id="" multiple >
+      <!-- <option value="" disabled selected>{{item.defaultProps}}</option> -->
+      <option *ngFor="let option of item.defaultOptions" value="option.text">
+        {{option.text}}
+      </option>
+    </select>
+  </div>
+  <div *ngIf="item.componentName=='dddatefield'">
+    <label for="">{{item.defaultLable}}</label>
+    <input [placeholder]="item.defaultProps" type="date">
+  </div>
+  <div *ngIf="item.componentName=='dddaterangefield'">
+    <label for="">{{item.defaultLable}}</label>
+    <input [placeholder]="item.defaultProps" type="date">
+    <label for="">{{item.defaultLable2}}</label>
+    <input [placeholder]="item.defaultProps2" type="date">
+  </div>
+  <div *ngIf="item.componentName=='ddattachment'">
+    <label for="">{{item.defaultLable}}</label>
+    <input [placeholder]="item.defaultProps" type="file">
+  </div>
+  <div *ngIf="item.componentName=='externalcontactfield'">
+    <label for="">{{item.defaultLable}}</label>
+    <select name="" id="">
+      <option value="" disabled selected>{{item.defaultProps}}</option>
+      <option value="张三">张三</option>
+      <option value="李四">李四</option>
+    </select>
+  </div>
+  <div *ngIf="item.componentName=='ddphotofield'">
+    <label for="">{{item.defaultLable}}</label>
+    <input [placeholder]="item.defaultProps" type="file">
+  </div>
+  <div *ngIf="item.componentName=='moneyfield'">
+    <label for="">{{item.defaultLable}}</label>
+    <input [placeholder]="item.defaultProps" type="number">
+  </div>
+  <div *ngIf="item.componentName=='textnote'">
+    <label for="">{{item.defaultLable}}</label>
+    <a [href]="item.defaultHref">{{item.defaultProps}}</a>
+  </div>
+
+
+  <div *ngIf="item.componentName=='tablefield'">
+    <label for="">{{item.defaultLable}}</label>
+    <div *ngFor="let n of arr">
+    <div *ngFor="let itemInTable of item.components; let idx = index">
+      <div *ngIf="itemInTable.componentName=='textareafield'">
+        <label for="">{{itemInTable.defaultLable}}</label>
+        <input [placeholder]="itemInTable.defaultProps" type="textarea">
+      </div>
+      <div *ngIf="itemInTable.componentName=='textfield'">
+        <label for="">{{itemInTable.defaultLable}}</label>
+        <input [placeholder]="itemInTable.defaultProps" type="text">
+      </div>
+      <div *ngIf="itemInTable.componentName=='numberfield'">
+        <label for="">{{itemInTable.defaultLable}}</label>
+        <input [placeholder]="itemInTable.defaultProps" type="number">
+      </div>
+      <div *ngIf="itemInTable.componentName=='ddselectfield'">
+        <label for="">{{itemInTable.defaultLable}}</label>
+        <select name="" id="">
+          <option value="" disabled selected>{{itemInTable.defaultProps}}</option>
+          <option *ngFor="let option of itemInTable.defaultOptions" value="option.text">
+            {{option.text}}
+          </option>
+        </select>
+      </div>
+      <div *ngIf="itemInTable.componentName=='ddmultiselectfield'">
+        <label for="">{{itemInTable.defaultLable}}</label>
+        <select name="" id="" multiple >
+          <!-- <option value="" disabled selected>{{item.defaultProps}}</option> -->
+          <option *ngFor="let option of itemInTable.defaultOptions" value="option.text">
+            {{option.text}}
+          </option>
+        </select>
+      </div>
+      <div *ngIf="itemInTable.componentName=='dddatefield'">
+        <label for="">{{itemInTable.defaultLable}}</label>
+        <input [placeholder]="itemInTable.defaultProps" type="date">
+      </div>
+      <div *ngIf="itemInTable.componentName=='dddaterangefield'">
+        <label for="">{{itemInTable.defaultLable}}</label>
+        <input [placeholder]="itemInTable.defaultProps" type="date">
+        <label for="">{{itemInTable.defaultLable2}}</label>
+        <input [placeholder]="itemInTable.defaultProps2" type="date">
+      </div>
+      <div *ngIf="itemInTable.componentName=='ddattachment'">
+        <label for="">{{itemInTable.defaultLable}}</label>
+        <input [placeholder]="itemInTable.defaultProps" type="file">
+      </div>
+      <div *ngIf="itemInTable.componentName=='externalcontactfield'">
+        <label for="">{{itemInTable.defaultLable}}</label>
+        <select name="" id="">
+          <option value="" disabled selected>{{itemInTable.defaultProps}}</option>
+          <option value="张三">张三</option>
+          <option value="李四">李四</option>
+        </select>
+      </div>
+      <div *ngIf="itemInTable.componentName=='ddphotofield'">
+        <label for="">{{itemInTable.defaultLable}}</label>
+        <input [placeholder]="itemInTable.defaultProps" type="file">
+      </div>
+      <div *ngIf="itemInTable.componentName=='moneyfield'">
+        <label for="">{{itemInTable.defaultLable}}</label>
+        <input [placeholder]="itemInTable.defaultProps" type="number">
+      </div>
+      <div *ngIf="itemInTable.componentName=='textnote'">
+        <label for="">{{itemInTable.defaultLable}}</label>
+        <a [href]="itemInTable.defaultHref">{{itemInTable.defaultProps}}</a>
+      </div>
+  </div>
+  </div>
+  <button (click)="onClick()">
+     {{item.defaultAction}}
+  </button>
+</div>
+
+
+
+</div>

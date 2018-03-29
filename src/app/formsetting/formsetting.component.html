@@ -1,8 +1,8 @@
 <div class="wf-form wf-formsettings">
   <div class="wf-field wf-setting-title">
     <div class="fieldname">
-      <span>审批名称</span>
-      <span class="fieldinfo">最多10个字</span>
+      <span>Approval Name</span>
+      <span class="fieldinfo"> 10 words max</span>
     </div>
     <div class="fieldblock">
       <input type="text" (input)="changeInfo()" maxlength="10" [(ngModel)]="title">
@@ -10,8 +10,8 @@
   </div>
   <div class="wf-field wf-setting-description">
     <div class="fieldname">
-      <span>审批说明</span>
-      <span class="fieldinfo">最多100个字</span>
+      <span>Approval description</span>
+      <span class="fieldinfo"> 100 words max</span>
     </div>
     <div class="fieldblock">
       <textarea type="text" (input)="changeInfo()" maxlength="100" [(ngModel)]="description"></textarea>
@@ -19,7 +19,7 @@
   </div>
   <div class="wf-field wf-setting-icon">
     <div class="fieldname">
-      图标
+      Icon
     </div>
     <div class="fieldblock">
       <div class="wf-iconselect">

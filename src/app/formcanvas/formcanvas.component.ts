@@ -1,3 +1,4 @@
+import { DataService } from 'app/data-service';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { EventService } from 'app/event.service';
 
@@ -24,9 +25,10 @@ export class FormcanvasComponent implements OnInit{
   private tabIndex = null;
   //拖动的时候 明细组件的index
   private parNodeIndex = null;
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService, private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.components = this.components;
     let self = this
     this.eventService.moveInCanvas.subscribe( obj => {
       //当鼠标在中间可拖动区域
@@ -513,7 +515,5 @@ export class FormcanvasComponent implements OnInit{
     }
       return count
   }
-
 }
-
 
