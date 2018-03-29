@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AngularFormDesigner
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
@@ -30,3 +31,6 @@ Run `ng github-pages:deploy` to deploy to GitHub Pages.
 
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 # form-designer
+=======
+# form-designer
+>>>>>>> f97902144e0625e5dfc734b2923132178b3c42ed
