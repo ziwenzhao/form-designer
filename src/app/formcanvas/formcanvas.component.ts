@@ -1,6 +1,7 @@
 import { DataService } from 'app/data-service';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { EventService } from 'app/event.service';
+import { debug } from 'util';
 
 @Component({
   selector: 'formcanvas',
@@ -303,6 +304,12 @@ export class FormcanvasComponent implements OnInit{
       } else {
         self.isempty = false
       }
+      let doms = document.querySelectorAll('.draging');
+      if(doms.length>0){
+        doms.item(0).classList.remove('draging');
+      }
+      // let dom = self.queryDomByIndex(document, self.dragIndex);
+      // dom.classList.remove('draging');
     })
     this.eventService.changeComponent.subscribe(obj => {
       for (let i = 0; i < self.components.length; i++) {

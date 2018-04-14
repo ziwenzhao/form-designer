@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from 'app/event.service';
+import { NzNotificationService } from 'ng-zorro-antd';
 // import * as firebase from 'firebase';
 @Component({
   selector: 'headactions',
@@ -8,12 +9,13 @@ import { EventService } from 'app/event.service';
 })
 export class HeadActionsComponent  {
   // private db = firebase.firestore();
-  constructor(private eventService: EventService) { }
+  constructor(private eventService: EventService, private _notification: NzNotificationService) { }
 
   private isdisable = false;
 
   save() {
     this.eventService.save.next();
+    this._notification.create('success', 'Save Success', '');
   }
 
 }

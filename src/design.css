@@ -887,7 +887,7 @@ html:not(.wf-cursor-move) .wf-component.active > .wf-overlay {
 }
 .wf-componentview >.wf-componentview-border >.wf-componentview-label {
   display: inline-block;
-  width: 6em;
+  width: 12em;
   padding: 0 8px 0 0;
   color: #222;
 }

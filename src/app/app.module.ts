@@ -1,3 +1,4 @@
+import {  NgZorroAntdModule, NZ_NOTIFICATION_CONFIG } from 'ng-zorro-antd';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -32,11 +33,13 @@ import { FormRendererComponent } from './form-renderer/form-renderer.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    NgZorroAntdModule.forRoot()
   ],
   providers: [
     EventService,
-    DataService
+    DataService,
+    { provide: NZ_NOTIFICATION_CONFIG, useValue: { nzDuration: 1500, nzTop: '50px', nzRight:'25px' } }
   ],
   bootstrap: [AppComponent]
 })
