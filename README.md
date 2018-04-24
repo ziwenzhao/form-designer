@@ -1,4 +1,4 @@
-This application implements a customized form builder. It is based on Angular2+
+This application implements a customized form builder. It is based on Angular2+. 
 To run the application
 1. Install @angular/cli, "npm install -g @angular/cli"
 2. go into the repository, install dependencies, "npm install"
